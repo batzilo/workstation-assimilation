@@ -163,11 +163,19 @@ apt-get dist-upgrade -y
 log_info "System upgraded"
 
 # basic stuff
-instpkg vim git gcc make python wget curl
+instpkg vim git gcc make python wget curl xterm
 
 # install xmonad and mate
 instpkg xorg xmonad xmobar suckless-tools mate-desktop-environment
 log_info "X.org, xmonad and MATE are installed"
+XWRAPPER_FILE=/etc/X11/Xwrapper.config
+if [ -f $XWRAPPER_FILE ];
+then
+	grep "^allowed_users" $XWRAPPER_FILE && sed -i '/^allowed_users/d' $XWRAPPER_FILE
+	grep "^needs_root_rights" $XWRAPPER_FILE && sed -i '/^needs_root_rights/d' $XWRAPPER_FILE
+	echo "allowed_users=anybody" >> $XWRAPPER_FILE
+	echo "needs_root_rights=yes" >> $XWRAPPER_FILE
+fi
 
 # web and mail
 instpkg firefox-esr thunderbird chromium browser-plugin-freshplayer-pepperflash
