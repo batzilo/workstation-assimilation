@@ -171,15 +171,16 @@ log_info "X.org, xmonad and MATE are installed"
 
 # web and mail
 instpkg firefox-esr thunderbird chromium browser-plugin-freshplayer-pepperflash
+log_info "firefox, thunderbird and chromium are installed"
+
+log_info "Installing/Updating pepper flash plugin... (This may take a few seconds)"
 if [ -z `which update-pepperflashplugin-nonfree` ]; then
 	# https://unix.stackexchange.com/questions/391467/how-to-install-flash-on-debian-stretch
 	curl -o /tmp/pepper.deb "http://ftp.ee.debian.org/debian/pool/contrib/p/pepperflashplugin-nonfree/pepperflashplugin-nonfree_1.8.3+nmu1_amd64.deb"
 	dpkg -i /tmp/pepper.deb
 fi
-log_debug "Checking status of pepper flash plugin..."
 update-pepperflashplugin-nonfree --install
-update-pepperflashplugin-nonfree --status || log_error "Failed to install/upgrade flash player"
-log_info "firefox, chromium, flash-player and thunderbird are installed"
+update-pepperflashplugin-nonfree --status && log_info "Pepper flash plugin is installed" || log_error "Failed to install/upgrade flash player"
 
 # install utilities
 instpkg screen zip unzip nmap dnsutils net-tools tcpdump wireshark \
