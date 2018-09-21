@@ -178,6 +178,10 @@ then
 fi
 
 # web and mail
+#
+# Vimperator is discontinued after Firefox 57 (or Firefox ESR 52), so switch to Tridactyl
+# FIXME: Install Tridactyl from the cli
+# FIXME: Add an ad-blocker, for example uBlock Origin
 instpkg firefox-esr thunderbird chromium browser-plugin-freshplayer-pepperflash
 log_info "firefox, thunderbird and chromium are installed"
 
