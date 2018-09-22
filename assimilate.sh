@@ -148,7 +148,7 @@ ensure_apt_repo "deb http://httpredir.debian.org/debian/ $RELEASE main contrib n
 # add debian.net/debian component to /etc/apt/sources.list
 ensure_apt_repo "deb http://http.debian.net/debian $RELEASE main contrib" -- "debian\.net/debian[/ ]" $RELEASE
 
-# add debian.net/debian component to /etc/apt/sources.list
+# add repository.spotify.com component to /etc/apt/sources.list
 ensure_apt_repo "deb http://repository.spotify.com stable non-free" -- repository.spotify.com stable non-free
 instpkg dirmngr
 apt-key adv --keyserver keyserver.ubuntu.com --recv-keys A87FF9DF48BF1C90
@@ -199,7 +199,9 @@ instpkg screen zip unzip nmap dnsutils net-tools tcpdump wireshark \
 	arandr pavucontrol htop openvpn network-manager proxychains \
 	virtualenv virtualenvwrapper python-dev \
 	libxml2-dev libxslt1-dev zlib1g-dev openssl gnupg \
-	alsa-utils zathura rdesktop recordmydesktop vlc hwinfo feh
+	alsa-utils zathura rdesktop recordmydesktop vlc hwinfo feh \
+	transmission-gtk
+
 # ? alsa-base
 log_info "various utilities are installed"
 
