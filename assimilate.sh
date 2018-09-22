@@ -288,6 +288,8 @@ then
 	pushd $DOTFILES_DIRECTORY
 	git remote remove origin
 	git remote add origin git@github.com:batzilo/dotfiles.git
+	git submodule init
+	git submodule update
 	popd
 fi
 VERBOSE_INSTALL_DOTFILES=
