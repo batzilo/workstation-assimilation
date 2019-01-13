@@ -1,0 +1,17 @@
+How to install
+--------------
+
+1. Go to http://ftp.mozilla.org/pub/firefox/releases/
+
+2. Pick a version, for example firefox-52.9.0esr
+
+3. Download sources
+   # wget http://ftp.mozilla.org/pub/firefox/releases/52.9.0esr/linux-$(uname -m)/en-US/firefox-52.9.0esr.tar.bz2
+
+4. Extract the package
+   # tar -xjf firefox-52.9.0esr.tar.bz2
+
+5. Move firefox dir to /opt
+   # mv firefox /opt/firefox-52.9.0esr
+
+6. Use the signed .xpi file to install vimperator
