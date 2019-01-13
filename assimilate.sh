@@ -200,7 +200,7 @@ instpkg screen zip unzip nmap dnsutils net-tools tcpdump wireshark \
 	virtualenv virtualenvwrapper python-dev \
 	libxml2-dev libxslt1-dev zlib1g-dev openssl gnupg \
 	alsa-utils zathura rdesktop recordmydesktop vlc hwinfo feh \
-	transmission-gtk flake8
+	transmission-gtk flake8 scrot gimp
 
 # ? alsa-base
 log_info "various utilities are installed"
