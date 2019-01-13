@@ -195,12 +195,17 @@ update-pepperflashplugin-nonfree --install
 update-pepperflashplugin-nonfree --status && log_info "Pepper flash plugin is installed" || log_error "Failed to install/upgrade flash player"
 
 # install utilities
-instpkg screen zip unzip nmap dnsutils net-tools tcpdump wireshark \
-	arandr pavucontrol htop openvpn network-manager proxychains \
+instpkg screen zip unzip arandr pavucontrol htop \
+	nmap net-tools tcpdump tcpflow ngrep wireshark-gtk netcat-openbsd \
+	bridge-utils ethtool openvpn network-manager proxychains dnsutils \
 	virtualenv virtualenvwrapper python-dev \
 	libxml2-dev libxslt1-dev zlib1g-dev openssl gnupg \
 	alsa-utils zathura rdesktop recordmydesktop vlc hwinfo feh \
 	transmission-gtk flake8 scrot gimp
+
+# For wireshark, you may need to run `dpkg-reconfigure wireshark-common`
+# and select 'Yes' to allow non-root users capture packets.
+adduser $TARGET_USER wireshark
 
 # ? alsa-base
 log_info "various utilities are installed"
