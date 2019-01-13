@@ -264,7 +264,13 @@ log_info "spotify is installed"
 
 # Install virtualbox
 
-# Install docker
+# Install Docker
+#
+# https://docs.docker.com/install/linux/docker-ce/debian/#set-up-the-repository
+#
+# curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
+# chmod +x /usr/local/bin/docker-compose
+
 
 # Configure sudo and add user to sudoers
 instpkg sudo
