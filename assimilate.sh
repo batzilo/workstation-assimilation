@@ -201,7 +201,7 @@ instpkg screen zip unzip arandr pavucontrol htop \
 	virtualenv virtualenvwrapper python-dev \
 	libxml2-dev libxslt1-dev zlib1g-dev openssl gnupg \
 	alsa-utils zathura rdesktop recordmydesktop vlc hwinfo feh \
-	transmission-gtk flake8 scrot gimp
+	transmission-gtk flake8 scrot gimp ipcalc
 
 # For wireshark, you may need to run `dpkg-reconfigure wireshark-common`
 # and select 'Yes' to allow non-root users capture packets.
@@ -270,6 +270,9 @@ log_info "spotify is installed"
 #
 # curl -L "https://github.com/docker/compose/releases/download/1.23.2/docker-compose-$(uname -s)-$(uname -m)" -o /usr/local/bin/docker-compose
 # chmod +x /usr/local/bin/docker-compose
+
+# Install node and npm
+# https://github.com/nodesource/distributions/blob/master/README.md#debinstall
 
 
 # Configure sudo and add user to sudoers
