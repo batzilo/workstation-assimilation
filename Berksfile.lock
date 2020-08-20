@@ -1,0 +1,9 @@
+DEPENDENCIES
+  apt (= 7.1.1)
+  assimilation
+    path: cookbooks/assimilation
+
+GRAPH
+  apt (7.1.1)
+  assimilation (0.1.0)
+    apt (>= 0.0.0)
