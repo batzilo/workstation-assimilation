@@ -520,3 +520,10 @@ package %w(
 # * configure sudo
 # * install virtualbox
 # * install viber
+
+#
+# Graphviz
+#
+package %w(
+  graphviz
+)
