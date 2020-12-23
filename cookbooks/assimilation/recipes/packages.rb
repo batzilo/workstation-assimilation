@@ -16,6 +16,7 @@ package %w(
   apt-utils
   bash
   bash-completion
+  ca-certificates
   easy-rsa
   galculator
   gnupg
@@ -24,6 +25,8 @@ package %w(
   htop
   ipcalc
   less
+  libreadline-dev
+  libssl-dev
   lsb-base
   lsb-release
   lsof
@@ -42,6 +45,7 @@ package %w(
   scrot
   sed
   sipcalc
+  software-properties-common
   strace
   tree
   xbacklight
@@ -243,6 +247,7 @@ package %w(
   dos2unix
   file
   gzip
+  libbz2-dev
   tar
   unrar
   unzip
@@ -516,7 +521,6 @@ package %w(
 
 # TODO:
 # * install/configure/run Dropbox
-# * install Docker
 # * configure sudo
 # * install virtualbox
 # * install viber
