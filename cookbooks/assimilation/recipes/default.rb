@@ -6,3 +6,6 @@ include_recipe 'assimilation::packages'
 
 # Install docker
 include_recipe 'assimilation::docker'
+
+# Install awscli
+include_recipe 'assimilation::awscli'
