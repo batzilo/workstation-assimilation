@@ -1,8 +1,10 @@
-#!/bin/bash -e
+#!/bin/bash
+
+set -e
 
 berks package cookbooks.tar.gz
 
-tar zcvf assimilation.tar.gz cookbooks.tar.gz chef-solo-node.json run.sh solo.rb
+tar zcvf assimilation.tar.gz cookbooks.tar.gz run.sh solo.rb
 
 scp assimilation.tar.gz root@vsoul.net:/var/www/html/
 

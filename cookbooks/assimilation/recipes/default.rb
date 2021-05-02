@@ -1,11 +1,8 @@
-# Manually setup apt sources
-include_recipe 'assimilation::apt'
+# The default recipe.
+# Install everything.
 
-# Install packages
-include_recipe 'assimilation::packages'
+# Install all CLI tools.
+include_recipe 'assimilation::cli'
 
-# Install docker
-include_recipe 'assimilation::docker'
-
-# Install awscli
-include_recipe 'assimilation::awscli'
+# Install the GUI stuff.
+include_recipe 'assimilation::gui'

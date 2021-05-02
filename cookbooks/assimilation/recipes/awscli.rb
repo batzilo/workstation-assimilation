@@ -1,3 +1,5 @@
+# vim: set nospell:
+
 remote_file "#{Chef::Config[:file_cache_path]}/awscliv2.zip" do
   source 'https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip'
   mode 644

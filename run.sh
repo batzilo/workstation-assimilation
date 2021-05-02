@@ -1,6 +1,23 @@
-#!/bin/bash -ex
+#!/bin/bash
+
+set -e
+set -x
 
 # Please run me as root
+
+RECIPE="default"
+while :
+do
+        case "$1" in
+                "--cli")
+                        # Be verbose.
+			RECIPE="cli"
+                        ;;
+                *)
+                        ;;
+        esac
+        shift || break
+done
 
 if ! hash chef-solo;
 then
@@ -18,4 +35,4 @@ fi
 tar zxvf cookbooks.tar.gz
 
 # Run chef-solo
-chef-solo -c solo.rb -j chef-solo-node.json
+chef-solo -c solo.rb --override-runlist "recipe[assimilation::$RECIPE]"
