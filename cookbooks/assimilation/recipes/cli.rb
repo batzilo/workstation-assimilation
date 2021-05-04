@@ -21,3 +21,6 @@ include_recipe 'assimilation::ssh_authorized_keys'
 
 # Install the SSH authorized_keys file.
 include_recipe 'assimilation::sshd_config'
+
+# Configure SSH for Google Authenticator MFA.
+include_recipe 'assimilation::sshd_mfa_google'
