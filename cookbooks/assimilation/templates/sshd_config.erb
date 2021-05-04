@@ -8,13 +8,15 @@ ListenAddress 0.0.0.0
 #
 # Authentication
 #
-PermitRootLogin no
-MaxAuthTries 3
-PubkeyAuthentication yes
+# First ask for SSH key pair, then for the OTP code.
+AuthenticationMethods publickey,keyboard-interactive
 AuthorizedKeysFile .ssh/authorized_keys
+# Allow sshd to ask for a Challenge Response for OTP codes.
+ChallengeResponseAuthentication yes
+MaxAuthTries 3
 PasswordAuthentication no
-# The default is yes, but Debian says no.
-ChallengeResponseAuthentication no
+PermitRootLogin no
+PubkeyAuthentication yes
 UsePAM yes
 
 X11Forwarding yes
