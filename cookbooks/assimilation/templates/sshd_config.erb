@@ -1,0 +1,27 @@
+# vim: set nospell:
+#
+# This is the sshd server system-wide configuration file.
+
+Port 22
+ListenAddress 0.0.0.0
+
+#
+# Authentication
+#
+PermitRootLogin no
+MaxAuthTries 3
+PubkeyAuthentication yes
+AuthorizedKeysFile .ssh/authorized_keys
+PasswordAuthentication no
+# The default is yes, but Debian says no.
+ChallengeResponseAuthentication no
+UsePAM yes
+
+X11Forwarding yes
+PrintMotd no
+
+# Allow client to pass locale environment variables
+AcceptEnv LANG LC_*
+
+# Override default of no subsystems
+Subsystem	sftp	/usr/lib/openssh/sftp-server
