@@ -54,8 +54,8 @@ Soon to be completely removed.
 
 In `/etc/fstab` add:
 ```
-UUID=7e51fa27-b811-4ed2-a78d-a6641ac86e1a /mnt/external auto defaults,user 0 0
-UUID=6fc110af-712e-468b-916c-5907861a4410 /mnt/garage auto defaults,user 0 0
+UUID=7e51fa27-b811-4ed2-a78d-a6641ac86e1a /mnt/external auto defaults,noauto,user 0 0
+UUID=6fc110af-712e-468b-916c-5907861a4410 /mnt/garage auto defaults,noauto,user 0 0
 ```
 
 This will allow any regular user to mount these filesystems.
