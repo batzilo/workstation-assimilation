@@ -8,10 +8,11 @@ ListenAddress 0.0.0.0
 #
 # Authentication
 #
-# First ask for SSH key pair, then for the OTP code.
-AuthenticationMethods publickey,keyboard-interactive
+# Authentication requires completion of every of the following methods.
+AuthenticationMethods publickey
+# The AuthorizedKeysFile is a relative path to user's home directory.
 AuthorizedKeysFile .ssh/authorized_keys
-# Allow sshd to ask for a Challenge Response for OTP codes.
+# Allow sshd to use keyboard-interactive authentication.
 ChallengeResponseAuthentication yes
 MaxAuthTries 3
 PasswordAuthentication no
