@@ -8,7 +8,7 @@
 
 On the development machine, run:
 ```
-bash pusblish.sh
+bash publish.sh
 ```
 
 And note the MD5 sum.
