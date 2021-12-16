@@ -16,8 +16,9 @@ include_recipe 'assimilation::chef'
 # Install docker.
 include_recipe 'assimilation::docker'
 
-# Install the SSH authorized_keys file.
-include_recipe 'assimilation::ssh_authorized_keys'
+# Commented-out, because each host should have its own authorized_keys.
+# # Install the SSH authorized_keys file.
+# include_recipe 'assimilation::ssh_authorized_keys'
 
 # Install the SSH authorized_keys file.
 include_recipe 'assimilation::sshd_config'
