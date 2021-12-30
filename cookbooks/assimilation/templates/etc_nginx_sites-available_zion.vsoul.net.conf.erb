@@ -1,0 +1,16 @@
+server {
+  listen      80;
+  server_name zion.vsoul.net;
+  root        /var/www/html;
+  index       index.html index.htm index.nginx-debian.html;
+
+  location / {
+    # First attempt to serve the request as a file,
+    # then as a directory,
+    # then fall back to displaying a 404 page.
+    try_files $uri $uri/ =404;
+
+    # Use the following to forward requests to another server, say in Docker.
+    # proxy_pass http://localhost:9999;
+  }
+}
