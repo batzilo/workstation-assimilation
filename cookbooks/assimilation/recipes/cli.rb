@@ -26,5 +26,6 @@ include_recipe 'assimilation::sshd_config'
 # Configure SSH for Google Authenticator MFA.
 include_recipe 'assimilation::sshd_mfa_google'
 
-# Configure a Dynamic DNS client.
-include_recipe 'assimilation::inadyn'
+# Commented-out, because it's no more needed for any host.
+# # Configure a Dynamic DNS client.
+# include_recipe 'assimilation::inadyn'
