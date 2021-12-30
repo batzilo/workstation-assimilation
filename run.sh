@@ -8,15 +8,17 @@ set -x
 RECIPE="default"
 while :
 do
-        case "$1" in
-                "--cli")
-                        # Be verbose.
+	case "$1" in
+		"--cli")
 			RECIPE="cli"
-                        ;;
-                *)
-                        ;;
-        esac
-        shift || break
+			;;
+		"--zion")
+			RECIPE="zion"
+			;;
+		*)
+			;;
+	esac
+	shift || break
 done
 
 if ! hash chef-solo;
