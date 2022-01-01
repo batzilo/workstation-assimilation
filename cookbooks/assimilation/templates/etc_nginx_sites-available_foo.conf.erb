@@ -1,0 +1,18 @@
+# Auto-generated file, do not edit, changes will be overridden.
+
+server {
+  listen      <%= @port %>;
+  server_name <%= @domain_names %>;
+  root        <%= @root_dir %>;
+  index       index.html;
+
+  location / {
+    # First attempt to serve the request as a file,
+    # then as a directory,
+    # then fall back to displaying a 404 page.
+    try_files $uri $uri/ =404;
+
+    # Use the following to forward requests to another server, say in Docker.
+    # proxy_pass http://localhost:9999;
+  }
+}

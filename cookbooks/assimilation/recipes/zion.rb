@@ -6,3 +6,9 @@ include_recipe 'assimilation::cli'
 
 # Install the nginx HTTP server.
 include_recipe 'assimilation::nginx'
+
+# Set up the zion.vsoul.net website.
+include_recipe 'assimilation::zion_vsoul_net'
+
+# Set up the vsoul.net website.
+include_recipe 'assimilation::vsoul_net'
