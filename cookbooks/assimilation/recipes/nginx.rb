@@ -6,6 +6,18 @@ package %w(
   action :upgrade
 end
 
+# Add users to the www-data group.
+%w[batzilo].each do |user|
+  # Add user to www-data group
+  group "www-data_add_#{user}" do
+    append true
+    group_name 'www-data'
+    members user
+    action :manage
+    only_if "getent passwd #{user}"
+  end
+end
+
 execute 'Disable the default nginx site' do
   command 'rm /etc/nginx/sites-enabled/default'
   only_if { ::File.exist?('/etc/nginx/sites-enabled/default') }
