@@ -17,7 +17,7 @@ And note the MD5 sum.
 
 On the workstation-to-be-assimilated, run:
 ```
-curl -s -q -o assimilation.tar.gz http://vsoul.net/assimilation.tar.gz
+curl -s -q -o assimilation.tar.gz https://zion.vsoul.net/assimilation.tar.gz
 md5sum assimilation.tar.gz
 ```
 
