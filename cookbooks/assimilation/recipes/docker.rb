@@ -6,7 +6,7 @@ execute 'docker_gpg_key' do
 end
 
 execute 'docker_apt_repository' do
-  command 'add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian stretch stable"'
+  command 'add-apt-repository "deb [arch=amd64] https://download.docker.com/linux/debian bullseye stable"'
   not_if { ::File.exist?('/usr/bin/docker') }
 end
 
