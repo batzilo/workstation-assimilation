@@ -40,6 +40,7 @@ package %w(
   sipcalc
   software-properties-common
   strace
+  tmux
   tree
   util-linux
 ) do
