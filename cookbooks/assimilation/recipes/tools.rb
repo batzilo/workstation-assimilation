@@ -70,7 +70,6 @@ package %w(
   e2fslibs:amd64
   e2fsprogs
   exfat-fuse
-  exfat-utils
   fuse3
   gdisk
   hdparm
