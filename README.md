@@ -8,28 +8,24 @@
 
 On the development machine, run:
 ```
-bash publish.sh
+make
 ```
 
-And note the MD5 sum.
+Commit, and push to the `master` branch on GitHub.
 
 ### Target
 
 On the workstation-to-be-assimilated, run:
 ```
-curl -s -q -o assimilation.tar.gz https://zion.vsoul.net/assimilation.tar.gz
-md5sum assimilation.tar.gz
+curl -s -L -o assimilation.tar.gz        https://github.com/batzilo/workstation-assimilation/raw/master/out/assimilation.tar.gz
+curl -s -L -o assimilation.tar.gz.sha512 https://github.com/batzilo/workstation-assimilation/raw/master/out/assimilation.tar.gz.sha512
+echo "$(cat assimilation.tar.gz.sha512)" | sha512sum --check
 ```
 
-If you like the MD5 sum, proceed:
+Assimilate:
 ```
 tar zxvf assimilation.tar.gz
-bash run.sh
-```
-
-If you want the CLI version only, then:
-```
-bash run.sh --cli
+bash run.sh [--cli]
 ```
 
 ## Using plain Bash
