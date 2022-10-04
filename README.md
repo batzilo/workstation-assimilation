@@ -17,14 +17,12 @@ Commit, and push to the `master` branch on GitHub.
 
 On the workstation-to-be-assimilated, run:
 ```
-curl -s -L -o assimilation.tar.gz        https://github.com/batzilo/workstation-assimilation/raw/master/out/assimilation.tar.gz
-curl -s -L -o assimilation.tar.gz.sha512 https://github.com/batzilo/workstation-assimilation/raw/master/out/assimilation.tar.gz.sha512
-echo "$(cat assimilation.tar.gz.sha512)" | sha512sum --check
+curl -s -L -o fetch.sh https://github.com/batzilo/workstation-assimilation/raw/master/fetch.sh
+bash fetch.sh
 ```
 
 Assimilate:
 ```
-tar zxvf assimilation.tar.gz
 bash run.sh [--cli]
 ```
 
