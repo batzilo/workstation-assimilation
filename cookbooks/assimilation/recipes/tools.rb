@@ -175,6 +175,7 @@ package %w(
   python3-ipdb
   python3-ipython
   python3-pip
+  python3-venv
   vim
 ) do
   action :upgrade
