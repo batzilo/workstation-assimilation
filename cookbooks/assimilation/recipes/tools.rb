@@ -182,6 +182,34 @@ package %w(
 end
 
 #
+# pyenv
+#
+# Taken from https://github.com/pyenv/pyenv/wiki#suggested-build-environment,
+# and yes, some are duplicates.
+#
+package %w(
+  build-essential
+  curl
+  libbz2-dev
+  libffi-dev
+  liblzma-dev
+  libncursesw5-dev
+  libreadline-dev
+  libsqlite3-dev
+  libssl-dev
+  libxml2-dev
+  libxmlsec1-dev
+  llvm
+  make
+  tk-dev
+  wget
+  xz-utils
+  zlib1g-dev
+) do
+  action :upgrade
+end
+
+#
 # Tex
 #
 package %w(
