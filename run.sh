@@ -12,6 +12,9 @@ do
 		"--cli")
 			RECIPE="cli"
 			;;
+		"--kurt")
+			RECIPE="kurt"
+			;;
 		"--zion")
 			RECIPE="zion"
 			;;
