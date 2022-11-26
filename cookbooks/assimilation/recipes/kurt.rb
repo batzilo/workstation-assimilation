@@ -6,3 +6,6 @@ include_recipe 'assimilation::cli'
 
 # Install the GUI stuff.
 include_recipe 'assimilation::gui'
+
+# Install the Kurt-specific stuff.
+include_recipe 'assimilation::kurt_backlight_udev'

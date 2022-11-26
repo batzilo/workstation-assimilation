@@ -1,0 +1,12 @@
+#
+# Be aware that udev does not support any form of line continuation.
+# Do not insert any line breaks in your rules, as this will cause udev
+# to see your one rule as multiple rules and will not work as expected.
+#
+# udev does not run these programs on any active terminal, and it does
+# not execute them under the context of a shell.
+#
+# Source: https://www.reactivated.net/writing_udev_rules.html
+#
+KERNEL=="intel_backlight", SUBSYSTEM=="backlight", ACTION=="add", RUN+="/bin/chgrp video /sys/class/backlight/%k/brightness /sys/class/backlight/%k/max_brightness", RUN+="/bin/chmod g+w /sys/class/backlight/%k/brightness /sys/class/backlight/%k/max_brightness"
+KERNEL=="intel_backlight", SUBSYSTEM=="backlight", ACTION=="change", RUN+="/bin/chgrp video /sys/class/backlight/%k/brightness /sys/class/backlight/%k/max_brightness", RUN+="/bin/chmod g+w /sys/class/backlight/%k/brightness /sys/class/backlight/%k/max_brightness"
