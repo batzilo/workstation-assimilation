@@ -4,6 +4,9 @@
 # Manually setup apt sources.
 include_recipe 'assimilation::apt'
 
+# Configure the keyboard.
+include_recipe 'assimilation::keyboard'
+
 # Install CLI tools.
 include_recipe 'assimilation::tools'
 
