@@ -15,6 +15,7 @@ package %w(
   xterm
   zathura
   zathura-pdf-poppler
+  redshift
 ) do
   action :upgrade
 end
