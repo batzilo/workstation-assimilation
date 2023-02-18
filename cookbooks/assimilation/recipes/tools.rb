@@ -119,18 +119,18 @@ end
 # FIXME: Add user to 'wireshark' group
 # for example `adduser $TARGET_USER wireshark`
 
-# #
-# # Bluetooth
-# #
-# package %w(
-#   blueman
-#   bluetooth
-#   bluez
-#   bluez-obexd
-#   bluez-tools
-# ) do
-#   action :upgrade
-# end
+#
+# Bluetooth
+#
+package %w(
+  bluetooth
+  bluez
+) do
+  action :upgrade
+end
+#  blueman
+#  bluez-obexd
+#  bluez-tools
 
 #
 # Files
