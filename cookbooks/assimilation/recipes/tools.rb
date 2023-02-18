@@ -123,12 +123,12 @@ end
 # Bluetooth
 #
 package %w(
+  blueman
   bluetooth
   bluez
 ) do
   action :upgrade
 end
-#  blueman
 #  bluez-obexd
 #  bluez-tools
 
