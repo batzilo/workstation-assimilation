@@ -5,6 +5,8 @@
 #
 package %w(
   recordmydesktop
+  redshift
+  rxvt-unicode
   scrot
   xbacklight
   xcompmgr
@@ -15,7 +17,6 @@ package %w(
   xterm
   zathura
   zathura-pdf-poppler
-  redshift
 ) do
   action :upgrade
 end
