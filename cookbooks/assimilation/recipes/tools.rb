@@ -141,6 +141,7 @@ package %w(
   file
   gzip
   libbz2-dev
+  ranger
   tar
   unrar
   unzip
