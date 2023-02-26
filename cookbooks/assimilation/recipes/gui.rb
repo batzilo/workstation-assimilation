@@ -11,6 +11,7 @@ package %w(
   xbacklight
   xcompmgr
   xinit
+  xinput
   xorg
   xscreensaver
   xscreensaver-data
