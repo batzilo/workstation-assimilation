@@ -34,6 +34,7 @@ package %w(
   ffmpegthumbnailer
   gimp
   gimp-data
+  mesa-utils
   pavucontrol
   pulseaudio
   pulseaudio-module-bluetooth
