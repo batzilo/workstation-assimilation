@@ -4,6 +4,7 @@
 # https://wiki.debian.org/HardwareVideoAcceleration
 package %w(
   i965-va-driver
+  vainfo
 ) do
   action :upgrade
 end
