@@ -9,3 +9,12 @@ package %w(
 ) do
   action :upgrade
 end
+
+# intel_gpu_top will show the video engine being
+# used if hardware video acceleration is working.
+# So long as it is above 0%, it is working.
+package %w(
+  intel-gpu-tools
+) do
+  action :upgrade
+end
