@@ -1,5 +1,13 @@
 # vim: set nospell:
 
+# Install packages for video acceleration.
+# https://wiki.debian.org/HardwareVideoAcceleration
+package %w(
+  i965-va-driver
+) do
+  action :upgrade
+end
+
 # Install packages for video acceleration for Chromium.
 # https://wiki.debian.org/Chromium
 package %w(
