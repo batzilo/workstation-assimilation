@@ -115,12 +115,12 @@ end
 #
 package %w(
   chromium
+  firefox-esr
 ) do
   action :upgrade
 end
 # Not currently used:
 # browser-plugin-freshplayer-pepperflash
-# firefox-esr
 # pepperflashplugin-nonfree
 
 # After installing chromium, I need to "Sign in Chromium"
@@ -146,41 +146,41 @@ end
 # * https://bugs.debian.org/cgi-bin/bugreport.cgi?bug=886358
 # * https://stackoverflow.com/questions/25308566/incremental-rebuild-debian-ubuntu-package
 
+# #
+# # Firefox 52.9.0 esr along with vimperator 3.16.0
+# #
+# remote_file "#{Chef::Config[:file_cache_path]}/firefox-52.9.0esr.tar.bz2" do
+#   source 'https://ftp.mozilla.org/pub/firefox/releases/52.9.0esr/linux-x86_64/en-US/firefox-52.9.0esr.tar.bz2'
+#   mode 644
+#   # Thu Aug 20 13:41:40 EEST 2020
+#   # $ sha256sum firefox-52.9.0esr.tar.bz2
+#   checksum '14df5f5f852dff005c43f8d0a1a772a5112b590e6b3ecc00a81cba9357f45269'
+#   not_if { File.exists?('/opt/firefox-52.9.0esr/firefox') }
+# end
 #
-# Firefox 52.9.0 esr along with vimperator 3.16.0
+# execute 'Extract the firefox compressed tarball' do
+#   command 'tar -xjf firefox-52.9.0esr.tar.bz2'
+#   cwd "#{Chef::Config[:file_cache_path]}"
+#   not_if { File.exists?('/opt/firefox-52.9.0esr/firefox') }
+# end
 #
-remote_file "#{Chef::Config[:file_cache_path]}/firefox-52.9.0esr.tar.bz2" do
-  source 'https://ftp.mozilla.org/pub/firefox/releases/52.9.0esr/linux-x86_64/en-US/firefox-52.9.0esr.tar.bz2'
-  mode 644
-  # Thu Aug 20 13:41:40 EEST 2020
-  # $ sha256sum firefox-52.9.0esr.tar.bz2
-  checksum '14df5f5f852dff005c43f8d0a1a772a5112b590e6b3ecc00a81cba9357f45269'
-  not_if { File.exists?('/opt/firefox-52.9.0esr/firefox') }
-end
-
-execute 'Extract the firefox compressed tarball' do
-  command 'tar -xjf firefox-52.9.0esr.tar.bz2'
-  cwd "#{Chef::Config[:file_cache_path]}"
-  not_if { File.exists?('/opt/firefox-52.9.0esr/firefox') }
-end
-
-execute 'Create the firefox directory in /opt' do
-  command 'mkdir -p /opt/firefox-52.9.0esr/'
-  not_if { File.exists?('/opt/firefox-52.9.0esr/firefox') }
-end
-
-execute 'Move the firefox directory to /opt' do
-  command 'cp -R firefox/* /opt/firefox-52.9.0esr/'
-  cwd "#{Chef::Config[:file_cache_path]}"
-  not_if { File.exists?('/opt/firefox-52.9.0esr/firefox') }
-end
-
+# execute 'Create the firefox directory in /opt' do
+#   command 'mkdir -p /opt/firefox-52.9.0esr/'
+#   not_if { File.exists?('/opt/firefox-52.9.0esr/firefox') }
+# end
 #
-# At this point:
-# * firefox is at /opt/firefox-52.9.0esr/firefox
-# * I must disable firefox updates
-# * I must use the signed .xpi file to install vimperator
+# execute 'Move the firefox directory to /opt' do
+#   command 'cp -R firefox/* /opt/firefox-52.9.0esr/'
+#   cwd "#{Chef::Config[:file_cache_path]}"
+#   not_if { File.exists?('/opt/firefox-52.9.0esr/firefox') }
+# end
 #
+# #
+# # At this point:
+# # * firefox is at /opt/firefox-52.9.0esr/firefox
+# # * I must disable firefox updates
+# # * I must use the signed .xpi file to install vimperator
+# #
 
 #
 # IM
