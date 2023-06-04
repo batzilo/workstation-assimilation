@@ -281,6 +281,15 @@ package %w(
   action :upgrade
 end
 
+#
+# Security
+#
+package %w(
+  keepassxc
+) do
+  action :upgrade
+end
+
 # TODO:
 # * install/configure/run Dropbox
 # * configure sudo
