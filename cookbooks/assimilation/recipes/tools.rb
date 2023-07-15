@@ -160,6 +160,8 @@ package %w(
   automake
   autotools-dev
   build-essential
+  clang
+  clang-tidy
   cpp
   diffutils
   g++
