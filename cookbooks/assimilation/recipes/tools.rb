@@ -161,6 +161,7 @@ package %w(
   autotools-dev
   build-essential
   clang
+  clang-format
   clang-tidy
   cpp
   diffutils
