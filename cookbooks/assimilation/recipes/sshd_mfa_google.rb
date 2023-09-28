@@ -43,7 +43,8 @@ ruby_block 'Enable the Google Authenticator PAM module' do
   block do
     line = 'auth required pam_google_authenticator.so'
     file = Chef::Util::FileEdit.new('/etc/pam.d/sshd')
-    file.insert_line_if_no_match(/#{line}/, "\n# vsoul\n#{line}")
+    # Source: https://askubuntu.com/a/864991
+    file.insert_line_if_no_match(/#{line}/, "\n# vsoul\nauth [success=done default=ignore] pam_succeed_if.so user ingroup <groupname>\n#{line}")
     file.write_file
   end
   # Do nothing unless user has run `google-authenticator` for setup.
