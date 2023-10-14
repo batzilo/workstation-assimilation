@@ -22,6 +22,7 @@ package %w(
   less
   libreadline-dev
   libssl-dev
+  linux-perf
   lsb-base
   lsb-release
   lsof
