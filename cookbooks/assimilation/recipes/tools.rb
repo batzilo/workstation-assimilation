@@ -56,8 +56,10 @@ package %w(
   firmware-linux-nonfree
   firmware-realtek
   hwinfo
+  hwloc
   lshw
   pciutils
+  x86info
 ) do
   action :upgrade
 end
