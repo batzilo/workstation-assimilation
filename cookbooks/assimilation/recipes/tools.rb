@@ -217,6 +217,15 @@ package %w(
 end
 
 #
+# Math
+#
+package %w(
+  libatlas-base-dev
+) do
+  action :upgrade
+end
+
+#
 # Tex
 #
 package %w(
