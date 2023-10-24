@@ -291,6 +291,7 @@ end
 # Graphviz
 #
 package %w(
+  gnuplot
   graphviz
 ) do
   action :upgrade
