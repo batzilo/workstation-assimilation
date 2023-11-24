@@ -175,6 +175,7 @@ package %w(
   git
   grep
   jq
+  libomp-dev
   make
   patch
   python3
