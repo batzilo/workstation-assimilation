@@ -166,6 +166,7 @@ package %w(
   clang
   clang-format
   clang-tidy
+  cmake
   cpp
   diffutils
   g++
