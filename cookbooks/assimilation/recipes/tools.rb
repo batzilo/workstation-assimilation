@@ -12,6 +12,7 @@ package %w(
   bash
   bash-completion
   ca-certificates
+  cups
   easy-rsa
   galculator
   gnupg
