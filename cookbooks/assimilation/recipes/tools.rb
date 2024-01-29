@@ -271,24 +271,23 @@ end
 #
 # Java
 #
-# package %w(
-#   ant
-#   ant-optional
-#   antlr
-#   default-java-plugin
-#   default-jdk
-#   default-jdk-headless
-#   default-jre
-#   default-jre-headless
-#   java-common
-#   maven
-#   openjdk-8-jdk-headless:amd64
-#   openjdk-8-jdk:amd64
-#   openjdk-8-jre-headless:amd64
-#   openjdk-8-jre:amd64
-# ) do
-#   action :upgrade
-# end
+package %w(
+  default-jdk
+  default-jdk-headless
+  default-jre
+  default-jre-headless
+  java-common
+  maven
+) do
+  action :upgrade
+end
+# ant
+# ant-optional
+# antlr
+# openjdk-8-jdk-headless:amd64
+# openjdk-8-jdk:amd64
+# openjdk-8-jre-headless:amd64
+# openjdk-8-jre:amd64
 
 #
 # Graphviz
