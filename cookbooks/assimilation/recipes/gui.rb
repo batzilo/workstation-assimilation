@@ -95,7 +95,6 @@ package %w(
   transmission-gtk
   wireshark
   wireshark-common
-  wireshark-gtk
 ) do
   action :upgrade
 end
