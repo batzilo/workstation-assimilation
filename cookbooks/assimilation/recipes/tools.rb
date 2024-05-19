@@ -71,7 +71,6 @@ end
 package %w(
   dmsetup
   dosfstools
-  e2fslibs:amd64
   e2fsprogs
   exfat-fuse
   fuse3
