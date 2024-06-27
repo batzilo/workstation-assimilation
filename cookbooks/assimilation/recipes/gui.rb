@@ -9,6 +9,7 @@ package %w(
   rxvt-unicode
   scrot
   xbacklight
+  xclip
   xcompmgr
   xinit
   xinput
