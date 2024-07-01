@@ -58,6 +58,7 @@ package %w(
   firmware-realtek
   hwinfo
   hwloc
+  inxi
   lshw
   pciutils
   x86info
