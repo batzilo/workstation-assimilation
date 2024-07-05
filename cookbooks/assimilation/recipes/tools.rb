@@ -23,6 +23,7 @@ package %w(
   less
   libreadline-dev
   libssl-dev
+  linux-headers-amd64
   linux-perf
   lsb-base
   lsb-release
