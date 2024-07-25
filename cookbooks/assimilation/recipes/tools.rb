@@ -54,6 +54,7 @@ end
 # Hardware
 #
 package %w(
+  ddccontrol
   dmidecode
   firmware-linux-nonfree
   firmware-realtek
