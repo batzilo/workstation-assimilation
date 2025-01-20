@@ -1,7 +1,26 @@
 # Debian keyboard configuration, see keyboard(5).
+#
+# For available options see https://man.archlinux.org/man/xkeyboard-config.7
 
-XKBMODEL="pc105"
+# What the keyboard is (the hardware):
+# ANSI US 104-keys
+XKBMODEL="pc104"
+
+# What the keys do (the layout / mapping):
+# US English and Greek
 XKBLAYOUT="us,gr"
-XKBVARIANT=""
-XKBOPTIONS="grp:alt_shift_toggle"
+
+# Keyboard variants:
+# US with Euro sign on 5 (use AltGr + 5)
+# Default variant for GR
+# Note: You must specify as many variants as the number of specified layouts.
+#       If you want the default variant, specify an empty string as the variant
+#       but the comma must stay.
+XKBVARIANT="euro,"
+
+# How to toggle between multiple configured keyboard layouts:
+# Alt+Shift or Ctrl+Space
+XKBOPTIONS="grp:alt_shift_toggle,grp:ctrl_space_toggle"
+
+# Determines the behavior of <BackSpace> and <Delete> keys on the console.
 BACKSPACE="guess"
