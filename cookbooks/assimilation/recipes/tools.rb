@@ -11,9 +11,11 @@ package %w(
   apt-utils
   bash
   bash-completion
+  bat
   ca-certificates
   cups
   easy-rsa
+  fzf
   galculator
   gnupg
   gnupg-agent
