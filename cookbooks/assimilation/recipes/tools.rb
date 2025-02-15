@@ -188,7 +188,10 @@ package %w(
   python3-ipython
   python3-pip
   python3-venv
+  ripgrep
   vim
+  vim-gtk3
+  vim-tiny
 ) do
   action :upgrade
 end
