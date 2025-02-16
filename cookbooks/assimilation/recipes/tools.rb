@@ -15,6 +15,7 @@ package %w(
   ca-certificates
   cups
   easy-rsa
+  fd-find
   fzf
   galculator
   gnupg
@@ -48,6 +49,7 @@ package %w(
   tmux
   tree
   util-linux
+  zoxide
 ) do
   action :upgrade
 end
@@ -179,6 +181,7 @@ package %w(
   ghc
   ghc-doc
   git
+  git-delta
   grep
   jq
   libomp-dev
